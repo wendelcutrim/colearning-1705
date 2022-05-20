@@ -36,24 +36,16 @@
     </header>
     <main class="container">
         <section class="title">
-            <h1>Mais vendidos</h1>
+            <h1><%= title%></h1>
         </section>
         <section class="products">
-            <article class="cards">
-                <h2>Titulo</h2>
-                <img src="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg" alt="">
-                <span>Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</span>
-            </article>
-            <article class="cards">
-                <h2>Titulo</h2>
-                <img src="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg" alt="">
-                <span>Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</span>
-            </article>
-            <article class="cards">
-                <h2>Titulo</h2>
-                <img src="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg" alt="">
-                <span>Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</span>
-            </article>
+            <% for(let produto of produtos) { %>
+                <article class="cards">
+                    <h2><%= produto.nome %></h2>
+                    <img src=<%= produto.img %> alt="">
+                    <span><%= produto.descricao %></span>
+                </article>
+            <% } %>
         </section>
 </body>
 
