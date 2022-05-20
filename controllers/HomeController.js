@@ -2,7 +2,7 @@ const path = require('path');
 
 const HomeController = {
     showPaginaInicial: (req, res) => {
-        res.send('Olá tudo bem?')
+        res.render('home');
     },
 
     showContato: (req, res) => {
