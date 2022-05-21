@@ -10,6 +10,12 @@ router.get('/renildo', HomeController.showRenildo);
 
 router.get('/login', HomeController.showLogin);
 
+router.get('/cadastrar/produto', HomeController.showCadastrar);
+
+router.post('/cadastrar/produto', HomeController.createProduto);
+
+
+
 
 
 module.exports = router;

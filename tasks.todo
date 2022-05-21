@@ -1,0 +1,8 @@
+Criar o arquivo cadastrar-produto.ejs na pasta views. Este arquivo deve ser um formulário que contenha o seguintes inputs:
+    ☐ Input do tipo text, com o name: id
+    ☐ Input do tipo text, com o name: nome
+    ☐ Input do tipo text, com o name: img
+    ☐ Input do tipo text, com o name: descricao
+
+☐ Criar uma rota do tipo get /cadastrar/produto
+☐ Configurar o controller para renderizar a view cadastrar-produto na rota do tipo get
