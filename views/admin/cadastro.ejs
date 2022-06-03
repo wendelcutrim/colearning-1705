@@ -47,7 +47,7 @@
         <h1>Cadastro de Produto</h1>
     </header>
     <main>
-        <form action="/adm/produtos/cadastro" method="POST">
+        <form action="/adm/produtos/cadastro" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
               <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira o nome do produto">
@@ -55,7 +55,7 @@
     
             <div class="mb-3">
                 <label for="img" class="form-label">Imagem</label>
-                <input type="text" class="form-control" name="img" id="img" placeholder="Insira a foto do produto">
+                <input type="file" class="form-control" name="img" id="img" placeholder="Insira a foto do produto">
             </div>
     
             <div class="mb-3">

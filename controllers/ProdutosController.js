@@ -14,12 +14,13 @@ const ProdutosController = {
     }, 
     
     storeProduto: (req, res) => {
-        const { nome, img, descricao } = req.body;
+        const { nome, descricao } = req.body;
+
 
         let content = fs.readFileSync("./db.json", "utf8");
         const db = JSON.parse(content);
 
-        const novoProduto = {id: gerarId(), nome, img, descricao};
+        const novoProduto = {id: gerarId(), nome, img: `/img/uploads/${req.file.filename}`, descricao};
 
         db.produtos.push(novoProduto);
         content = JSON.stringify(db, null, 4);
@@ -47,13 +48,18 @@ const ProdutosController = {
 
     updateProduto: (req, res) => {
         const {id} = req.params;
-        const { nome, img, descricao } = req.body;
+        const { nome, descricao } = req.body;
 
         let content = fs.readFileSync("./db.json", "utf8");
         const db = JSON.parse(content);
 
         const indiceProduto = db.produtos.findIndex(produto => produto.id == id);
+        let img = db.produtos[indiceProduto].img;
         
+        if(req.file){
+            img = `/img/uploads/${req.file.filename}`
+        }
+
         const produtoAtualizado = {id, nome, img, descricao};
 
         db.produtos[indiceProduto] = produtoAtualizado;

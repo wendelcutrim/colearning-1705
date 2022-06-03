@@ -1,1 +1,10 @@
-{"produtos":[{"id":1,"nome":"Um produto legal","img":"https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg","descricao":"Um produto legal"},{"id":2,"nome":"Um produto legal 2","img":"https://t.ctcdn.com.br/5BgZqDi8kp8YzXSngnuUNiI9Klk=/512x288/smart/filters:format(webp)/i517079.jpeg","descricao":"Um produto legal 2"},{"id":"916c811c-1ff3-41d6-9a1d-a61e1b70b9d3","nome":"One Piece Red Filme","img":"https://sm.ign.com/ign_br/screenshot/default/fpy0j9yaaaenrud_mhjd.jpg","descricao":"Filme do shanks editado"}]}
+{
+    "produtos": [
+        {
+            "id": "912246aa-4667-4d16-8e49-f6a218520fa8",
+            "nome": "Ace editado ",
+            "img": "/img/uploads/1654289444290-733369839-836599_portgas-d-ace-wallpaper-31-jpg_1920x1080_h.jpg",
+            "descricao": "Irmão do Luffy.\r\nAlterado a imagem"
+        }
+    ]
+}

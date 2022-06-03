@@ -47,7 +47,7 @@
         <h1>Editar Produto</h1>
     </header>
     <main>
-        <form action="/adm/produtos/<%=produto.id%>/editar?_method=PUT" method="POST">
+        <form action="/adm/produtos/<%=produto.id%>/editar?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
               <input type="text" class="form-control" name="nome" id="nome" value="<%=produto.nome%>">
@@ -55,7 +55,7 @@
     
             <div class="mb-3">
                 <label for="img" class="form-label">Imagem</label>
-                <input type="text" class="form-control" name="img" id="img" value="<%=produto.img%>">
+                <input type="file" class="form-control" name="img" id="img" value="<%=produto.img%>">
             </div>
     
             <div class="mb-3">
