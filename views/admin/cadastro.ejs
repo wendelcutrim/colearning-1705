@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Cadastro de Produto</title>
+    <style>
+        body{
+            background-color: rgba(137, 43, 226, 0.223);
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        form {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 5rem auto
+        }
+
+        .btn-primary{
+            background-color:blueviolet;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(68, 0, 120);
+            color: white;
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Produto</h1>
+    </header>
+    <main>
+        <form action="/adm/produtos/cadastro" method="POST">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira o nome do produto">
+            </div>
+    
+            <div class="mb-3">
+                <label for="img" class="form-label">Imagem</label>
+                <input type="text" class="form-control" name="img" id="img" placeholder="Insira a foto do produto">
+            </div>
+    
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição</label>
+                <textarea type="text-area" class="form-control" name="descricao" id="descricao" placeholder="Insira a descrição do produto"></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </form>
+    </main>
+    
+</body>
+</html>
