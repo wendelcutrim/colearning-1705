@@ -1,6 +1,8 @@
 const fs = require('fs');
 const {v4: gerarId} = require('uuid');
+const storage = require('../config/storage');
 
+const upload = storage("img", "/uploads");
 const ProdutosController = {
     
     showAllProducts: (req, res) => {
