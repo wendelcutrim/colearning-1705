@@ -8,7 +8,7 @@ router.get('/contato', HomeController.showContato);
 
 router.get('/renildo', HomeController.showRenildo);
 
-router.get('/login', HomeController.showLogin);
+
 
 router.get('/cadastrar/produto', HomeController.showCadastrar);
 

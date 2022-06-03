@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const homeRoutes = require('./routes/homeRoutes');
+const usuariosRoutes = require('./routes/usuariosRoutes');
 
 //Configurações do servidor
 app.set('view engine', 'ejs');
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 
 //Utilizando rotas
 app.use(homeRoutes);
+app.use(usuariosRoutes);
 
 
 app.listen(port, () => console.log("Servidor está funcionando na porta: " + port));
