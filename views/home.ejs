@@ -12,25 +12,19 @@
 <body>
     <header class="container">
         <div>
-            <h1>Logo</h1>
+            <a href="">
+                <h1>Logo</h1>
+            </a>
         </div>
         <nav>
             <ul>
                 <a href="">
-                    <li>Link 1</li>
+                    <li>Login</li>
                 </a>
                 <a href="">
-                    <li>Link 2</li>
+                    <li>Cadastrar-se</li>
                 </a>
-                <a href="">
-                    <li>Link 3</li>
-                </a>
-                <a href="">
-                    <li>Link 4</li>
-                </a>
-                <a href="">
-                    <li>Link 5</li>
-                </a>
+                
             </ul>
         </nav>
     </header>
@@ -44,9 +38,11 @@
                     <h2><%= produto.nome %></h2>
                     <img src=<%= produto.img %> alt="">
                     <span><%= produto.descricao %></span>
+                    <input id="idP" type="hidden" value="<%=produto.id%>">
                 </article>
             <% } %>
         </section>
+    </main>
 </body>
 
 </html>

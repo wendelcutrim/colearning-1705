@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Lista de Produtos</title>
+    <style>
+        body {
+            background-color: rgba(137, 43, 226, 0.223);
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .cadastro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        .cadastro button {
+            width: 250px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: blueviolet;
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .cadastro button:hover{
+            background-color: rgb(68, 0, 120);
+            color: white;
+            transform: scale(1.1);
+            transition: all 0.2s;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .table {
+            width: 70%;
+            margin: 0 auto;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Produtos</h1>
+    </header>
+    <main>
+        <div class="cadastro">
+            <a href="">
+                <button>Cadastrar</button>
+            </a>
+        </div>
+        <table class="table  table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">imagem</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let produto of produtos) { %>
+                    <tr>
+                        <th scope="row"><%= produto.id %></th>
+                        <td><img class="thumb" src="<%= produto.img %>" alt="" width="100px" height="100px"></td>
+                        <td><%= produto.nome %></td>
+                        <td><%= produto.descricao %></td>
+                        <td>
+                            <a href="/adm/produtos/<%= produto.id %>" type="button" class="btn btn-primary">Abrir</a>
+                            <a href="/adm/produtos/<%= produto.id %>/editar" type="button" class="btn btn-secondary">Editar</a>
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </td>
+                    </tr>
+                <% } %>  
+             
+            </tbody>
+        </table>
+    </main>
+
+
+</body>
+
+</html>
