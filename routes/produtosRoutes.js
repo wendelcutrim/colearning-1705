@@ -6,9 +6,15 @@ router.get("/produtos", ProdutosController.showTodosProdutos);
 
 router.get("/produtos/cadastro", ProdutosController.showCadastroProdutos);
 
+router.post("/produtos/cadastro", ProdutosController.storeProduto);
+
 router.get("/produtos/:id", ProdutosController.viewProduto);
 
-router.get("/produtos/:id/editar", ProdutosController.updateProduto);
+router.get("/produtos/:id/editar", ProdutosController.showAtualizarProduto);
+
+router.put("/produtos/:id/editar", ProdutosController.updateProduto);
+
+
 
 module.exports = router;
 /*

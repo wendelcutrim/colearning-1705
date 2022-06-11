@@ -47,23 +47,23 @@
         <h1>Editar Produto</h1>
     </header>
     <main>
-        <form>
+        <form action="/adm/produtos/<%=produto.id%>/editar?_method=PUT" method="POST">
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control" name="nome" id="nome" >
+              <input type="text" class="form-control" name="nome" id="nome" value="<%=produto.nome%>" >
             </div>
     
             <div class="mb-3">
                 <label for="img" class="form-label">Imagem</label>
-                <input type="text" class="form-control" name="img" id="img" >
+                <input type="text" class="form-control" name="foto" id="img" value="<%=produto.img%>" >
             </div>
     
             <div class="mb-3">
                 <label for="descricao" class="form-label">Descrição</label>
-                <textarea type="text-area" class="form-control" name="descricao" id="descricao"></textarea>
+                <textarea type="text-area" class="form-control" name="descricao" id="descricao"><%=produto.descricao%></textarea>
             </div>
     
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
           </form>
     </main>
     
